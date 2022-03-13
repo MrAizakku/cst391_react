@@ -17,7 +17,7 @@ export default class OneHousehold extends React.Component {
     handleDelete = () => {
         // eslint-disable-next-line no-restricted-globals
         if(confirm('Are you sure you want to delete?')) {
-            axios.delete(`http://localhost:3009/households/`+this.props.household.id)
+            axios.delete(`https://cst391nodejs.herokuapp.com/households/`+this.props.household.id)
             .then(result => {
                 console.log(result);
                 alert(result.data.httpMessage);

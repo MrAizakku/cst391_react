@@ -15,7 +15,7 @@ export default class EditHousehold extends React.Component {
         if(this.state.name === "" || this.state.description === "" || this.state.address === "" ) {
             alert("ERROR: Please fill out the form correctly.");
         } else {
-            axios.put(`http://localhost:3009/households/`+this.props.household.id, this.state)
+            axios.put(`https://cst391nodejs.herokuapp.com/households/`+this.props.household.id, this.state)
             .then(result => {
                 console.log(result.data);
                 alert(result.data.httpMessage);

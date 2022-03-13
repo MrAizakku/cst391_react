@@ -15,7 +15,7 @@ export default class NewItem extends React.Component {
         if(this.state.name === "" || this.state.description === "" || this.state.quantity === 0 ) {
             alert("ERROR: Please fill out the form correctly.");
         } else {
-            axios.post(`http://localhost:3009/items`, this.state)
+            axios.post(`https://cst391nodejs.herokuapp.com/items`, this.state)
             .then(result => {
                 console.log(result.data);
                 alert(result.data.httpMessage);

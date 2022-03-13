@@ -33,7 +33,7 @@ export default class ListItems extends React.Component {
         //console.log("state=", this.state);
         // eslint-disable-next-line no-restricted-globals
         if(confirm('Are you sure you want to delete?')) {
-            axios.delete(`http://localhost:3009/items/`+eid)
+            axios.delete(`https://cst391nodejs.herokuapp.com/items/`+eid)
             .then(result => {
                 alert(result.data.httpMessage);
                 var newArr = this.state.items;

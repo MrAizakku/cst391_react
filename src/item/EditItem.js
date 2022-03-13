@@ -15,7 +15,7 @@ export default class EditItem extends React.Component {
         if(this.state.name === "" || this.state.description === "" || this.state.quantity <= 0 ) {
             alert("ERROR: Please fill out the form correctly.");
         } else {
-            axios.put(`http://localhost:3009/items/`+this.state.itemid, this.state)
+            axios.put(`https://cst391nodejs.herokuapp.com/items/`+this.state.itemid, this.state)
             .then(result => {
                 console.log(result.data);
                 alert(result.data.httpMessage);
